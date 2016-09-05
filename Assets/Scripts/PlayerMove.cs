@@ -2,16 +2,32 @@
 using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
+    public Rigidbody2D rb;
     public float speed;
-    
-    void FixedUpdate()
+
+    public void Start()
     {
-        // set mouse pos to world space
-        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePos);
-        // gives direction for where mouse is looking
-        Quaternion rot = Quaternion.LookRotation(transform.position - mousePos, Vector3.forward);
-        transform.rotation = rot;
-        transform.eurlerAngles = new Vector3(0, 0, transform.eurlerAngles.z);
-        GetComponent<Rigidbody2D>().angularVelocity = 0;
+        rb = this.GetComponent<Rigidbody2D>();
+    }
+    
+    public void Update()
+    {   
+        // based on key input adjust GameObjects x and y positions
+        if (Input.GetKey(KeyCode.W))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(0, speed));
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(0, -speed));
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(-speed, 0));
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(speed, 0));
+        }
     }
 }
