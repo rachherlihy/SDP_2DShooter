@@ -3,16 +3,19 @@ using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
     public Rigidbody2D rb;
+    // set speed in Unity on the component
     public float speed;
 
+    // get access to the GameObjects Rigidbody component for updates
     public void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
     }
-    
+
+    // based on key input adjust GameObjects x and y positions
+    // to move the player on screen
     public void Update()
     {   
-        // based on key input adjust GameObjects x and y positions
         if (Input.GetKey(KeyCode.W))
         {
             this.rb.MovePosition(this.transform.position + new Vector3(0, speed));
@@ -30,4 +33,5 @@ public class PlayerMove : MonoBehaviour {
             this.rb.MovePosition(this.transform.position + new Vector3(speed, 0));
         }
     }
+
 }
