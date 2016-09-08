@@ -32,6 +32,25 @@ public class PlayerMove : MonoBehaviour {
         {
             this.rb.MovePosition(this.transform.position + new Vector3(speed, 0));
         }
+
+        //diagonal movements
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(1, 1).normalized*speed);
+        }
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(-1, 1).normalized*speed);
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(1, -1).normalized*speed);
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+        {
+            this.rb.MovePosition(this.transform.position + new Vector3(-1, -1).normalized*speed);
+        }
+
     }
 
 }
