@@ -1,27 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StartingScene : MonoBehaviour
-{
-    public Transform instructionMenu;
-    public void LoadScene(string name)
-    {
-        Application.LoadLevel(name);
+
+public class StartingScene : MonoBehaviour {
+    public void ChangeScene(string changeSceneTo) {
+        Application.LoadLevel("main");
+
     }
-    public void QuitGame()
-    {
-        if(Input.GetKey("escape"))
+    public void ChangeAnotherScene(string goBackScene) {
+        Application.LoadLevel("Starting Scene");
+    }
+    public void QuitGame() {
         Application.Quit();
-    
-}
-
-    public void InstructionMenu(bool click)
-    {
-        if (click == true)
-        {
-            instructionMenu.gameObject.SetActive(click);
-        }
-
-
     }
 }
