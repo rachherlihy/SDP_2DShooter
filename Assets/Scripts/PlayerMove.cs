@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMove : MonoBehaviour {
+public class PlayerMove : MonoBehaviour
+{
     public Rigidbody2D rb;
     // set speed in Unity on the component
     public float speed;
@@ -50,7 +51,5 @@ public class PlayerMove : MonoBehaviour {
         {
             this.rb.MovePosition(this.transform.position + new Vector3(-1, -1).normalized*speed);
         }
-
     }
-
 }
