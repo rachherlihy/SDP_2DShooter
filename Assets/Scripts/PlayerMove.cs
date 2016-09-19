@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMove : MonoBehaviour
-{
+public class PlayerMove : MonoBehaviour {
     public Rigidbody2D rb;
     // set speed in Unity on the component
-    public float speed;
+  	public float speed;
+	//public Vector2 speed = new Vector2 (50, 50);
 
     // get access to the GameObjects Rigidbody component for updates
     public void Start()
@@ -51,5 +51,20 @@ public class PlayerMove : MonoBehaviour
         {
             this.rb.MovePosition(this.transform.position + new Vector3(-1, -1).normalized*speed);
         }
+		// shooting 
+		bool shoot = Input.GetButtonDown ("Fire1");
+		shoot |= Input.GetButtonDown ("Fire2");
+		if (shoot) 
+		{
+			WeaponScript weapon = GetComponent<WeaponScript> ();
+			if (weapon != null) 
+			{
+				weapon.Attack (false);
+			}
+		}
+
     }
+
+
+
 }
