@@ -82,11 +82,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013509762642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23601def5953791418bf4c5bc5498c2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 233888e0014f193428213714ed5de7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 30
+  speed: 20
 --- !u!212 &212000012910142936
 SpriteRenderer:
   m_ObjectHideFlags: 1
