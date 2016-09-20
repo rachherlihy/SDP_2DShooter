@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
     public Rigidbody2D rb;
+    public Animator anim;
     // set speed in Unity on the component
   	public float speed;
 	//public Vector2 speed = new Vector2 (50, 50);
@@ -11,6 +12,7 @@ public class PlayerMove : MonoBehaviour {
     public void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        anim = this.GetComponent<Animator>();
     }
 
     // based on key input adjust GameObjects x and y positions
@@ -20,6 +22,7 @@ public class PlayerMove : MonoBehaviour {
         if (Input.GetKey(KeyCode.W))
         {
             this.rb.MovePosition(this.transform.position + new Vector3(0, speed));
+            anim.SetTrigger("left");
         }
         if (Input.GetKey(KeyCode.S))
         {

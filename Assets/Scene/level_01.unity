@@ -129,6 +129,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4000010595577620, guid: 00694327318f6244ebd563282a9f314c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00694327318f6244ebd563282a9f314c, type: 2}
   m_IsPrefabParent: 0
@@ -255,7 +259,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011247655646, guid: 69a3ea0a04873654ab0732017650de79, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011247655646, guid: 69a3ea0a04873654ab0732017650de79, type: 2}
       propertyPath: m_LocalScale.x
@@ -445,7 +449,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1644509211}
+      objectReference: {fileID: 1873692504}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 519b4a20f58fa3741a2bc51e14f6ad9a, type: 2}
   m_IsPrefabParent: 0
@@ -719,11 +723,6 @@ BoxCollider2D:
   m_Offset: {x: 1258.4545, y: 1736.7336}
   serializedVersion: 2
   m_Size: {x: 2520.0823, y: 3474.6326}
---- !u!1 &1644509211 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013509762642, guid: 08578cdbd16a1ad4baf0d8984d96d315,
-    type: 2}
-  m_PrefabInternal: {fileID: 901977987}
 --- !u!1 &1752289578
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +791,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1752289578}
+--- !u!1 &1873692504 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013229941734, guid: 08578cdbd16a1ad4baf0d8984d96d315,
+    type: 2}
+  m_PrefabInternal: {fileID: 901977987}
 --- !u!1 &1931804461
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +944,7 @@ Transform:
   - {fileID: 1601986502}
   - {fileID: 783186431}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!1 &2116712486
 GameObject:
   m_ObjectHideFlags: 0
