@@ -4,7 +4,7 @@ using System.Collections;
 
 public class StartingScene : MonoBehaviour {
     public void ChangeScene(string changeSceneTo) {
-        Application.LoadLevel("main");
+        Application.LoadLevel("level_01");
 
     }
     public void ChangeAnotherScene(string goBackScene) {
