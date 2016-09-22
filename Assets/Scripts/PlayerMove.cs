@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour {
     //public Image Healthbar;
     //public int startHealth = 100;
     //public int currentHealth;
+    public static int health;
     public Rigidbody2D rb;
     public Animator anim;
 
@@ -21,9 +22,8 @@ public class PlayerMove : MonoBehaviour {
     {
         rb = this.GetComponent<Rigidbody2D>();
         anim = this.GetComponent<Animator>();
-        
+        health = 100;
         //SetHealthBar();
-
     }
 
     // based on key input adjust GameObjects x and y positions
@@ -76,8 +76,7 @@ public class PlayerMove : MonoBehaviour {
 				weapon.Attack (false);
 			}
 		}
-       // TakeDamage();
-        
+        // TakeDamage();
 
 
     }
