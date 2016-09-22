@@ -4,26 +4,22 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 
-    //public Image Healthbar;
-    //public int startHealth = 100;
-    //public int currentHealth;
-    public static int health;
+    public Image Healthbar;
+    public static float startHealth = 100f;
+    public static float currentHealth = 0f;
     public Rigidbody2D rb;
     public Animator anim;
 
-    //bool isDead;
-    //bool damaged;
     // set speed in Unity on the component
   	public float speed;
-	//public Vector2 speed = new Vector2 (50, 50);
 
     // get access to the GameObjects Rigidbody component for updates
     public void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
         anim = this.GetComponent<Animator>();
-        health = 100;
-        //SetHealthBar();
+        currentHealth = startHealth;
+        Healthbar.fillAmount = currentHealth;
     }
 
     // based on key input adjust GameObjects x and y positions
@@ -76,67 +72,20 @@ public class PlayerMove : MonoBehaviour {
 				weapon.Attack (false);
 			}
 		}
-        // TakeDamage();
 
+        Healthbar.GetComponent<Image>().fillAmount = currentHealth / 100f;
+        if (currentHealth <= 0f) {
+            Application.LoadLevel("End Scene");
+        }
+        
+    }
 
+    public void SetHealth(float damage) {
+       
+        currentHealth -= damage;
+        if (currentHealth <= 0f) {
+            Application.LoadLevel("End Scene");
+        }
     }
    
-
-    /*void Awake() {
-        currentHealth = startHealth;
-    }
-
-    public void TakeDamage(int amount = 20) {
-        damaged = true;
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            currentHealth -= amount;
-
-            Healthbar.fillAmount = currentHealth;
-        }
-    
-        if (currentHealth <= 0) {
-            Death();
-        }
-
- 
-    }
-
-    void Death() {
-        isDead = true;
-        Application.LoadLevel("End Scene");
-    }
-    */
-
-    /*public void TakeDamage(int amount)
-    {
-        cur_health -= amount;
-        //SetHealthBar();
-    }
-
-    public void SetHealthBar()
-    {
-        cur_health = max_health;
-        //float my_health = cur_health / max_health;
-        Healthbar.fillAmount = max_health;
-        if (Input.GetKey(KeyCode.Space))
-        {
-            max_health -= 2;
-         //   my_health -= 20f;
-        }
-    }*/
-
-    /*void hit(int damage = 20) {
-        currentHealth -= damage;
-        //currentHealth.fillAmount -=damage;
-    }
-
-    public void decreaseHealth() {
-        currentHealth -= 2;
-        float calculateHealth = currentHealth/maxHealth;
-    }
-    
-    */
-
-
 }

@@ -5,7 +5,7 @@ public class EnemyAI : MonoBehaviour
 {
     private Transform playerPos;
     public float speed;
-    public int attack = 10;
+    public float attack = 10f;
     float cooldownTime = 1;
     bool isCooledDown = true;
 
@@ -26,8 +26,10 @@ public class EnemyAI : MonoBehaviour
             {
                 Debug.Log("--- Player Pos = " + playerPos);
                 Debug.Log("--- Enemy Pos = " + enemyPos);
-                PlayerMove.health -= attack;
-                Debug.Log("--- Health = " + PlayerMove.health);
+                
+                PlayerMove.currentHealth -= attack;
+                Debug.Log("--- Health = " + PlayerMove.currentHealth);
+
                 isCooledDown = false;
             }
             // set player cooldown to true allowing them to attack again
@@ -41,17 +43,9 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
-           
+
+
     }
-    
-   // void OnTriggerEnter(Collider other) {
-     //   if (other.collider.name == "Player") {
-       //     other.transform.GetComponent<HP>().SetHealth(attackDamage);
-        //}
-    //}
-    /*
-    void SetAttackTarget(Transform targetTransform) {
-        playerPos = targetTransform;
-    }
-    */
+
+          
 }
