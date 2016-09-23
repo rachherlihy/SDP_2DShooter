@@ -24,7 +24,7 @@ GameObject:
   - 95: {fileID: 95000010501215456}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 300
-  attack: 10
 --- !u!212 &212000013866699668
 SpriteRenderer:
   m_ObjectHideFlags: 1
