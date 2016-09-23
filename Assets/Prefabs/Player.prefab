@@ -24,6 +24,8 @@ GameObject:
   - 50: {fileID: 50000010139123454}
   - 114: {fileID: 114000010136619762}
   - 95: {fileID: 95000012463872428}
+  - 114: {fileID: 114000010543373420}
+  - 114: {fileID: 114000010844438452}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -103,9 +105,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233888e0014f193428213714ed5de7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Healthbar: {fileID: 0}
   rb: {fileID: 0}
   anim: {fileID: 0}
   speed: 15
+--- !u!114 &114000010543373420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013229941734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8263e85f91fa574bb40f7f5bee13b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 4000013384965900, guid: 1cb72e174e168a7498f81bd4b2521914, type: 2}
+  shootingRate: 0.25
+--- !u!114 &114000010844438452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013229941734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2601c42c472549348a66f5c54bddbb5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000011997718804
 SpriteRenderer:
   m_ObjectHideFlags: 1
