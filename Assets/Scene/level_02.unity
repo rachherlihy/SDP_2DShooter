@@ -297,6 +297,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4000012734597892, guid: 00694327318f6244ebd563282a9f314c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00694327318f6244ebd563282a9f314c, type: 2}
   m_IsPrefabParent: 0
@@ -337,7 +341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013946719516, guid: 519b4a20f58fa3741a2bc51e14f6ad9a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000012911334858, guid: 519b4a20f58fa3741a2bc51e14f6ad9a,
         type: 2}
@@ -676,6 +680,11 @@ Prefab:
       propertyPath: speed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010136619762, guid: 08578cdbd16a1ad4baf0d8984d96d315,
+        type: 2}
+      propertyPath: Healthbar
+      value: 
+      objectReference: {fileID: 1790397967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08578cdbd16a1ad4baf0d8984d96d315, type: 2}
   m_IsPrefabParent: 0
@@ -727,6 +736,36 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000013229941734, guid: 08578cdbd16a1ad4baf0d8984d96d315,
     type: 2}
   m_PrefabInternal: {fileID: 1238119570}
+--- !u!114 &1338670863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1338670862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2601c42c472549348a66f5c54bddbb5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1362156156 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000014144459194, guid: 00694327318f6244ebd563282a9f314c,
+    type: 2}
+  m_PrefabInternal: {fileID: 368839278}
+--- !u!61 &1362156157
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362156156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.75, y: 0.75}
 --- !u!1 &1486851475
 GameObject:
   m_ObjectHideFlags: 0
