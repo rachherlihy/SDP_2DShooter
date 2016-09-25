@@ -24,12 +24,7 @@ public class EnemyAI : MonoBehaviour
         {   // if enemy has cooled down they can attack the player's health
             if(isCooledDown)
             {
-                Debug.Log("--- Player Pos = " + playerPos);
-                Debug.Log("--- Enemy Pos = " + enemyPos);
-                
                 PlayerMove.currentHealth -= attack;
-                Debug.Log("--- Health = " + PlayerMove.currentHealth);
-
                 isCooledDown = false;
             }
             // set player cooldown to true allowing them to attack again
@@ -43,9 +38,5 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
-
-
-    }
-
-          
+    }         
 }

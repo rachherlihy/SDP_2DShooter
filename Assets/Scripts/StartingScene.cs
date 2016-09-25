@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-public class StartingScene : MonoBehaviour {
-    public void ChangeScene(string changeSceneTo) {
+public class StartingScene : MonoBehaviour
+{
+    public void ChangeScene(string changeSceneTo)
+    {
         Application.LoadLevel("level_01");
-
     }
-    public void ChangeAnotherScene(string goBackScene) {
+
+    public void ChangeAnotherScene(string goBackScene)
+    {
         Application.LoadLevel("Starting Scene");
     }
-    public void QuitGame() {
+
+    public void QuitGame()
+    {
         Application.Quit();
     }
 }

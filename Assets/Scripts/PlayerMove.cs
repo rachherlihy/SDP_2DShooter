@@ -2,13 +2,12 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class PlayerMove : MonoBehaviour {
-
+public class PlayerMove : MonoBehaviour
+{
     public Image Healthbar;
     public static float startHealth = 100f;
     public static float currentHealth = 0f;
     public Rigidbody2D rb;
-    public Animator anim;
 
     // set speed in Unity on the component
   	public float speed;
@@ -17,7 +16,6 @@ public class PlayerMove : MonoBehaviour {
     public void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        anim = this.GetComponent<Animator>();
         currentHealth = startHealth;
         Healthbar.fillAmount = currentHealth;
     }
@@ -29,7 +27,6 @@ public class PlayerMove : MonoBehaviour {
         if (Input.GetKey(KeyCode.W))
         {
             this.rb.MovePosition(this.transform.position + new Vector3(0, speed));
-            anim.SetTrigger("left");
         }
         if (Input.GetKey(KeyCode.S))
         {
