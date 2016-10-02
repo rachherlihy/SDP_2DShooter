@@ -5,6 +5,11 @@ public class HealthScript : MonoBehaviour
 {
 	public int hp = 2;
 	public bool isEnemy = true;
+    public ScoreManager sm;
+
+    void Start() {
+        sm = FindObjectOfType<ScoreManager>();
+    }
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
@@ -18,8 +23,9 @@ public class HealthScript : MonoBehaviour
 				Destroy (bullet.gameObject);
 				if (hp <= 0) 
 				{
-					Destroy (gameObject);
-				}
+                    Destroy (gameObject);
+                    sm.addToScore();
+                }
 			}
 		}
 	}
