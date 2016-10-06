@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Starting Scene.unity
   - enabled: 1
+    path: Assets/Scene/LoadMap.unity
+  - enabled: 1
     path: Assets/Scene/level_01.unity
   - enabled: 1
     path: Assets/Scene/level_02.unity

@@ -13,6 +13,10 @@ public class StartingScene : MonoBehaviour
         Application.LoadLevel("Starting Scene");
     }
 
+    public void LoadMap(string loadMap) {
+        Application.LoadLevel("LoadMap");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
