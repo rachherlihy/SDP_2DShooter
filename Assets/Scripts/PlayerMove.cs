@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     public static float startHealth = 100f;
     public static float currentHealth = 0f;
     public Rigidbody2D rb;
+    private Animator anim;
 
     // set speed in Unity on the component
   	public float speed;
@@ -18,6 +19,7 @@ public class PlayerMove : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         currentHealth = startHealth;
         Healthbar.fillAmount = currentHealth;
+        anim = this.GetComponent<Animator>();
     }
 
     // based on key input adjust GameObjects x and y positions
@@ -26,18 +28,22 @@ public class PlayerMove : MonoBehaviour
     {   
         if (Input.GetKey(KeyCode.W))
         {
+            anim.SetInteger("Direction", 2);
             this.rb.MovePosition(this.transform.position + new Vector3(0, speed));
         }
         if (Input.GetKey(KeyCode.S))
         {
+            anim.SetInteger("Direction", 0);
             this.rb.MovePosition(this.transform.position + new Vector3(0, -speed));
         }
         if (Input.GetKey(KeyCode.A))
         {
+            anim.SetInteger("Direction", 3);
             this.rb.MovePosition(this.transform.position + new Vector3(-speed, 0));
         }
         if (Input.GetKey(KeyCode.D))
         {
+            anim.SetInteger("Direction", 1);
             this.rb.MovePosition(this.transform.position + new Vector3(speed, 0));
         }
 
