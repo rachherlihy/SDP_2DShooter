@@ -133,7 +133,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 730201438}
+      objectReference: {fileID: 563697018}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 519b4a20f58fa3741a2bc51e14f6ad9a, type: 2}
   m_IsPrefabParent: 0
@@ -468,6 +468,11 @@ Prefab:
 --- !u!50 &563697017 stripped
 Rigidbody2D:
   m_PrefabParentObject: {fileID: 50000014279125206, guid: a19a661ca77049d42a2894e57bcc950b,
+    type: 2}
+  m_PrefabInternal: {fileID: 563697016}
+--- !u!1 &563697018 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012206598468, guid: a19a661ca77049d42a2894e57bcc950b,
     type: 2}
   m_PrefabInternal: {fileID: 563697016}
 --- !u!1 &565564961

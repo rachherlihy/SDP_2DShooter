@@ -403,6 +403,11 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 50000014279125206, guid: a19a661ca77049d42a2894e57bcc950b,
     type: 2}
   m_PrefabInternal: {fileID: 567808784}
+--- !u!1 &567808786 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012206598468, guid: a19a661ca77049d42a2894e57bcc950b,
+    type: 2}
+  m_PrefabInternal: {fileID: 567808784}
 --- !u!1001 &582410771
 Prefab:
   m_ObjectHideFlags: 0
@@ -446,7 +451,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1338670862}
+      objectReference: {fileID: 567808786}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 519b4a20f58fa3741a2bc51e14f6ad9a, type: 2}
   m_IsPrefabParent: 0
@@ -863,11 +868,6 @@ BoxCollider2D:
   m_Offset: {x: 815621.1, y: -1358175.6}
   serializedVersion: 2
   m_Size: {x: 577131.7, y: 389185.28}
---- !u!1 &1338670862 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013229941734, guid: 08578cdbd16a1ad4baf0d8984d96d315,
-    type: 2}
-  m_PrefabInternal: {fileID: 1238119570}
 --- !u!1 &1486851475
 GameObject:
   m_ObjectHideFlags: 0
