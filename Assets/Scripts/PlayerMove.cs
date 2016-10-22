@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public static float currentHealth = 0f;
     public Rigidbody2D rb;
     private Animator anim;
+    public bool isDead = false;
 
     // set speed in Unity on the component
   	public float speed;
@@ -76,17 +77,25 @@ public class PlayerMove : MonoBehaviour
 			}
 		}
 
+        // updates the health bar displayed on the screen
         Healthbar.GetComponent<Image>().fillAmount = currentHealth / 100f;
-        if (currentHealth <= 0f) {
+        // if player health hits 0, checks if new highscore and
+        // adds it to the list if so then or, otherwise loads end screen
+        if (currentHealth <= 0f)
+        {
+            // check to see if a new highscore and add to list if so
+            isDead = true;
+            Debug.Log(" Player is dead ");
             Application.LoadLevel("End Scene");
-        }
-        
+        }  
     }
 
-    public void SetHealth(float damage) {
-       
+    // CHECK??
+    public void SetHealth(float damage)
+    {
         currentHealth -= damage;
-        if (currentHealth <= 0f) {
+        if (currentHealth <= 0f)
+        {
             Application.LoadLevel("End Scene");
         }
     }
